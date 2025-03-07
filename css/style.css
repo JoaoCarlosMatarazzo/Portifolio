@@ -120,7 +120,7 @@ span{
     text-align: center;
 }
 .services-container{
-    display: fles;
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
@@ -151,12 +151,13 @@ span{
 .services-box h3{
     font-size: 1.5rem;
 }
-services-box p{
+.services-box p{
     margin: 0.5rem;
     letter-spacing: 0.1rem;
     /* n lines ...*/
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 4; /*Caso de problema venha dar uma olhada  nisso aqui ------------------------------------------------------------------------------------------------------*/
+    /*-------------------------------------------------------------*/
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -319,7 +320,140 @@ footer{
     transform: translate(0, -0.65rem) rotate(45deg);
 }
 /*=== /menu hamburguer ===*/
+/*=== media queries ===*/
 
+
+/* Extra small (xs): Smartphones (portrait)*/
+@media (min-width: 0px) {
+    .menu-hamburguer{
+        display: block;
+    }
+    .nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+    }
+    section{
+        padding: 6rem 2.5rem;
+    }
+    .home, .about{
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    .home-img, .about-img{
+        width: 80%;
+        max-width: 80%;
+    }
+    .home-content, .about-content{
+        width: 100%;
+    }
+    .home-content div{
+        text-align: center;
+    }
+    .home-content h1, .about-content h1{
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+    .services-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .services-box{
+        width: 100%;
+    }
+    header{
+        background-color: var(--color-01);
+    }
+}
+/*Small (sm): Smartphone (landscape) */
+@media (min-width:576px){
+    .home-img, .about-img{
+        width: 65%;
+        max-width: 65%;
+    }
+    .services-box{
+        width: 70%;
+    }
+    header{
+        background-color: var(--color-02);
+    }
+}
+/*Medium (md): Tablet*/
+@media (min-width:768px){
+    .menu-hamburguer{
+        display: none;
+    }
+    .nav{
+        display: block;
+    }
+    .nav-responsive, .nav-responsive a{
+        display: none;
+    }
+    .home, .about{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .home-img, .about-img{
+        max-width: 35%;
+    }
+    .home-content, .about-content{
+        width: 50%;
+    }
+    /* .services-container{
+        flex-direction: column;
+        align-items: center;
+    } */
+    .services-box{
+        width: 60%;
+        margin-bottom: 2rem;
+    }
+    .portfolio-container{
+        grid-template-columns: auto auto;
+    }
+    form .input-box{
+        width: 49%;
+    }
+    header{
+        background-color: var(--color-03);
+    }
+}
+/*LArge (lg): NOtebook*/
+@media (min-width:992px){
+    /* .home-img, .about-img{
+        max-width: 35%;
+    } */
+    .services-container{
+        flex-direction: row;
+        gap:1.2rem
+    }
+
+    header{
+        background-color: var(--color-04);
+    }
+}
+/*Extra large (xl): Desktop*/
+@media (min-width:1200px){
+    .home-img, .about-img{
+        max-width: 25%;
+    }
+    .home-content h1{
+        font-size: 2.7rem;
+    }
+    .home-content h2{
+        font-size: 2rem;
+    }
+    .portfolio-container{
+        grid-template-columns: auto auto auto;
+    }
+    header{
+        background-color: var(--color-05);
+    }
+}
+/*=== /media queries ===*/
 
 
 
