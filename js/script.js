@@ -17,22 +17,3 @@ function toggleMenu(){
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
