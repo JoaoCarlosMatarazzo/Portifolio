@@ -44,7 +44,7 @@
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    border: solid 1px var(--color-02);/*Teste*/
+    /*border: solid 1px var(--color-02);/*Teste*/
 }
 .logo {
     font-size: 1.7rem;
@@ -52,22 +52,29 @@
     font-weight: 600;
     cursor: default;
 }
-.nav a{
+
+.nav-responsive{
+    display: none;
+    position: absolute;
+    top: 100%;
+    padding: 1rem;
+    background-color: var(--bg-color-01);
+}
+
+.nav a, .nav-responsive a{
     font-size: 1.2rem;
     color: var(--text-color);
     padding: 0.5rem 1rem;
     transition: 0.4s;
-
-    border: solid 1px var(--color-02);/*Teste*/
+    /*border: solid 1px var(--color-02);/*Teste*/
 }
-.nav a:hover{
-    color:var(--main-color)
+.nav a:hover, .nav-responsive a:hover{
+    color: var(--main-color)
 }
 section{
     min-height: 100vh;
     padding: 6rem 6rem 2rem;
-
-    border: solid 1px var(--color-02);/*Teste*/
+    /*border: solid 1px var(--color-02);/*Teste*/
 }
 span{
     color: var(--main-color);
@@ -101,8 +108,7 @@ span{
 .home-content h1, .about-content h1{
     font-weight: 700;
     line-height: 1.3;
-
-    font-size: 1.6rem; /*teste*/
+    /*font-size: 1.6rem; /*teste*/
 }
 .home-content h3, .about-content h3{
     font-weight: 700;
@@ -331,7 +337,7 @@ footer{
     .nav{
         display: none;
     }
-    .nav-responsive{
+    .nav-responsive a{
         display: block;
         font-size: 1.2rem;
         margin: 0.5rem 0;
@@ -365,9 +371,6 @@ footer{
     .services-box{
         width: 100%;
     }
-    header{
-        background-color: var(--color-01);
-    }
 }
 /*Small (sm): Smartphone (landscape) */
 @media (min-width:576px){
@@ -377,9 +380,6 @@ footer{
     }
     .services-box{
         width: 70%;
-    }
-    header{
-        background-color: var(--color-02);
     }
 }
 /*Medium (md): Tablet*/
@@ -403,10 +403,6 @@ footer{
     .home-content, .about-content{
         width: 50%;
     }
-    /* .services-container{
-        flex-direction: column;
-        align-items: center;
-    } */
     .services-box{
         width: 60%;
         margin-bottom: 2rem;
@@ -417,9 +413,6 @@ footer{
     form .input-box{
         width: 49%;
     }
-    header{
-        background-color: var(--color-03);
-    }
 }
 /*LArge (lg): NOtebook*/
 @media (min-width:992px){
@@ -429,10 +422,6 @@ footer{
     .services-container{
         flex-direction: row;
         gap:1.2rem
-    }
-
-    header{
-        background-color: var(--color-04);
     }
 }
 /*Extra large (xl): Desktop*/
@@ -448,9 +437,6 @@ footer{
     }
     .portfolio-container{
         grid-template-columns: auto auto auto;
-    }
-    header{
-        background-color: var(--color-05);
     }
 }
 /*=== /media queries ===*/
