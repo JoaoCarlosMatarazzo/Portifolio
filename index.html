@@ -75,7 +75,7 @@
 
                 <p>Criando interfaces dinâmicas e intuitivas que transformam a experiência do usuário.</p>
 
-                <a href="https://github.com/JoaoCarlosMatarazzo/Biblioteca_Web.git" target="_blank" class="btn">Vew More</a>
+                <a href="https://github.com/JoaoCarlosMatarazzo/Biblioteca_Web.git" target="_blank" class="btn">View More</a>
             </div>
             <div class="services-box">
                 <i class='bx bx-code-curly'></i>
@@ -83,7 +83,7 @@
 
                 <p>Desenvolvo sistemas robustos e escaláveis, garantindo segurança, eficiência e integração entre serviços.</p>
 
-                <a href="https://github.com/JoaoCarlosMatarazzo/Manutencao_preditiva.git" target="_blank" class="btn">Vew More</a>
+                <a href="https://github.com/JoaoCarlosMatarazzo/Manutencao_preditiva.git" target="_blank" class="btn">View More</a>
 
             </div>
             <div class="services-box">
@@ -92,7 +92,7 @@
 
                 <p>Construo aplicativos eficientes e intuitivos, focados em usabilidade e desempenho de forma fluida e inovadora.</p>
 
-                <a href="#" class="btn">Vew More</a>
+                <a href="#" class="btn">View More</a>
             </div>
         </div>
     </section>
@@ -167,20 +167,20 @@
     <section class="contact" id="contact">
         <h2>Contact <span>Me!</span></h2>
 
-        <form action="">
+        <form id="contact-form">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="E-mail">
+                <input type="text" name="user_name" placeholder="Full Name" required>
+                <input type="email" name="user_email" placeholder="E-mail" required>
             </div>
 
             <div class="input-box">
-                <input type="number" placeholder="Phone Number">
-                <input type="text" placeholder="Subject">
+                <input type="tel" name="user_phone" placeholder="Phone Number">
+                <input type="text" name="subject" placeholder="Subject">
             </div>
 
-            <textarea cols="30" rows="8" placeholder="Message"></textarea>
+            <textarea name="message" cols="30" rows="8" placeholder="Message" required></textarea>
 
-            <a href="#" class="btn">Enviar Mensagem</a>
+            <button type="submit" class="btn">Enviar Mensagem</button>
         </form>
     </section>
     <!-- /contact section-->
@@ -192,13 +192,13 @@
         </div>
 
         <div class="about-content">
-            <h3> About Me</h3>
+            <h3> Sobre Mim</h3>
             <h1>Full-Stack <span>Developer</span></h1>
 
             <p>Sou um desenvolvedor Full Stack apaixonado por tecnologia e inovação. Tenho experiência na criação de APIs robustas, otimização de desempenho e escalabilidade de sistemas. Trabalho com Java, Python, SQL e JavaScript, além de possuir grande interesse em projetos que integram inteligência artificial. Estou sempre buscando desafios que me permitam evoluir e entregar soluções de alto nível.
             </p>
 
-            <a href="cv.pdf/Carta_2025.pdf" target="_blank" class="btn">Read More</a>
+            <!-- <a href="cv.pdf/Carta_2025.pdf" target="_blank" class="btn">Ler mais</a> -->
         </div>
     </section>
     <!--/about section -->
@@ -207,5 +207,6 @@
         <p>Copyright &copy; 2025 by &lt;/JoãoCarlosMatarazzo&gt;. All Rights Reserved.</p>
     </footer>
 </body>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script src="js/script.js"></script>
 </html>
